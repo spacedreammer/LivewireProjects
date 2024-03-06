@@ -55,7 +55,7 @@
         </div>
         @endif
 
-        @if ($role == 'vendor')
+        @if ($role === 'vendor')
         <div class="mb-4">
             <input type="text" wire:model.debounce.500ms='vat_number' placeholder="VAT Number" class="w-full border @error('vat_number') border-red-500 @enderror
             ">

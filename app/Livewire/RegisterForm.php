@@ -11,7 +11,7 @@ class RegisterForm extends Component
     public string $first_name = '';
     public string $last_name = '';
     public string $role = 'customer';
-    public string $comany_name = '';
+    public string $company_name = '';
     public string $vat_number = '';
 
     protected $rules = [
@@ -19,8 +19,8 @@ class RegisterForm extends Component
         'last_name' => ['required', 'min:2'],
         'email' => ['required', 'email'],
         'password' => ['required', 'min:8'],
-        'comany_name' => ['required_if:role,vendor'],
-        'first_name' => ['required_if:role,vendor'],
+        'company_name' => ['required_if:role,vendor'],
+        'vat_number' => ['required_if:role,vendor'],
 
 
     ];
@@ -42,7 +42,7 @@ class RegisterForm extends Component
         $this->first_name = '';
         $this->last_name = '';
         $this->role = 'customer';
-        $this->comany_name = '';
+        $this->company_name = '';
         $this->vat_number = '';
     }
 
